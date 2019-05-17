@@ -1,5 +1,4 @@
 
-<% /* %>
 
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@
             <style>
         	#map {
   			height: 800px;
-  			width: 80%
+  			width: 100%
 			}
 		</style>
         
@@ -32,50 +31,21 @@
     <script>
       var map;
       function initMap() {
+      	
+      	var Hamilton = {lat: -37.78333, lng: 175.28333};
+      	
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: -41.811244, lng: 173.687056},
-          zoom: 0
+          zoom: 5
+      
         });
+        
+        var marker = new google.maps.Marker({position: Hamilton, map: map});
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC22hm5Rl_JgliDoxIcY6t8AmjlrrS33cw&callback=initMap"
     async defer></script>
         
-    </body>
-
-    <script>
-         angular.element(document).ready(function() {
-            angular.bootstrap(document, ['ConsoleModule']);
-        });
-    </script>
-
-</html>
-
-<% */ %>
-
-<!DOCTYPE html>
-<html lang="en-us">
-
-    <head>
-        <title>DemoDRA - Current Weather</title>
-
-        <link rel="stylesheet" href="/built/css/default.css" />
-
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-route/angular-route.js"></script>
-    </head>
-
-    <body>
-        <script src="/js/mapControl.js"></script>
-        <script src="/js/controllers.js"></script>
-        <div style="float:left; width:100%; height:40%; padding-left:15px">
-            <% include includes/mainbody %>
-			
-        </div>
-        
-        <div id="map" style="float:left; width:100%; height:60%; padding-left:15px" ng-model="map1m" ng-change="map(1)"></div>
-		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-
     </body>
 
     <script>
