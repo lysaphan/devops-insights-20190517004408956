@@ -1,7 +1,7 @@
 
 <% /* %>
-=======
-<% /* %><% */ %>
+
+
 <!DOCTYPE html>
 <html lang="en-nz">
 
@@ -41,6 +41,41 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC22hm5Rl_JgliDoxIcY6t8AmjlrrS33cw&callback=initMap"
     async defer></script>
         
+    </body>
+
+    <script>
+         angular.element(document).ready(function() {
+            angular.bootstrap(document, ['ConsoleModule']);
+        });
+    </script>
+
+</html>
+
+<% */ %>
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <title>DemoDRA - Current Weather</title>
+
+        <link rel="stylesheet" href="/built/css/default.css" />
+
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+    </head>
+
+    <body>
+        <script src="/js/mapControl.js"></script>
+        <script src="/js/controllers.js"></script>
+        <div style="float:left; width:100%; height:40%; padding-left:15px">
+            <% include includes/mainbody %>
+			
+        </div>
+        
+        <div id="map" style="float:left; width:100%; height:60%; padding-left:15px" ng-model="map1m" ng-change="map(1)"></div>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
     </body>
 
     <script>
