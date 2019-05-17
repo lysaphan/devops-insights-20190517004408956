@@ -22,7 +22,6 @@
         }
         request({
       		method: 'GET',
-              //url: appUrl + '/api/v1/getWeather?zip=78613'
               url: appUrl + '/api/v1/getWeather?zip=3204'
           }, function(err, resp, body) {
           	if(err) {
@@ -62,7 +61,6 @@
         }
         request({
       		method: 'GET',
-              //url: appUrl + '/api/v1/getWeather?zip=78641'
               url: appUrl + '/api/v1/getWeather?zip=3204'
           }, function(err, resp, body) {
           	if(err) {
@@ -70,7 +68,6 @@
           	} else {
               assert.equal(resp.statusCode, 200);
               var pbody = JSON.parse(body);
-              //assert(pbody.city === 'Round Rock', "City name does not match");
               assert(pbody.city === 'Hamilton', "City name does not match");
               done();
             }
