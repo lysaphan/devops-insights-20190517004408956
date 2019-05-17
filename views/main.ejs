@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <% /* %>
+=======
+<% /* %><% */ %>
+>>>>>>> 41fb9f17da2ce0394619c60749fcaeb4f4338d16
 <!DOCTYPE html>
 <html lang="en-nz">
 
@@ -11,21 +15,18 @@
         <script src="/bower_components/angular-route/angular-route.js"></script>
         <script src="/js/controllers.js"></script>
         
-        <title>Simple Map</title>
-    	<meta name="viewport" content="initial-scale=1.0">
-    	<meta charset="utf-8">
-    	<style>
-      
+            <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
       #map {
-        height: 100%;
+        height: 50%;
       }
-      
       html, body {
-        height: 100%;
-        margin: 0;
+        height: 50%;
+        margin: 2;
         padding: 0;
       }
-    </style>
         
     </head>
 
@@ -34,13 +35,13 @@
             <% include includes/mainbody %>
         </div>
         
-         <div id="map"></div>
+    <div id="map"></div>
     <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -37.7833, lng: 172.2793},
-          zoom: 8
+          center: {lat: -41.811244, lng: 173.687056},
+          zoom: 0
         });
       }
     </script>
@@ -56,6 +57,7 @@
     </script>
 
 </html>
+<<<<<<< HEAD
 <% */ %>
 
 <!DOCTYPE html>
@@ -93,3 +95,6 @@
     async defer></script>
   </body>
 </html>
+=======
+
+>>>>>>> 41fb9f17da2ce0394619c60749fcaeb4f4338d16
